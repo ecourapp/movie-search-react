@@ -35,6 +35,8 @@ class Search extends React.Component {
                                         loading: false,
                               });
                     }
+                    xhr.setRequestHeader('Content-Type', 'application/json');
+                    xhr.setRequestHeader('Access-Control-Allow-Headers', '*');
                     xhr.onerror = (err) => {
                               this.setState({
                                         err: 'Something went wrong!',
